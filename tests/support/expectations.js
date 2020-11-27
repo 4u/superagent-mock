@@ -9,8 +9,7 @@ module.exports = function (request, config, isServer) {
   var logger = function (log) {
     currentLog = log;
   };
-  var superagentPackage = require('superagent/package.json');
-  var superagentUserAgentHeader = isServer ? {'User-Agent': 'node-superagent/' + superagentPackage.version} : {};
+  var superagentUserAgentHeader = {};
   var originalSetTimeout = setTimeout;
 
   beforeEach(function (go) {
